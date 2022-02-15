@@ -75,7 +75,7 @@ favoriteThings['show'] = 'The Big Bang Theory'
 favoriteThings.food = 'Chicken Nuggets'
 favoriteThings['book'] = 'Harry Potter'
 
-console.log(favoriteThings)
+// console.log(favoriteThings)
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
 // Do not edit the code below.
@@ -92,7 +92,8 @@ var carDetails = {
 */
 
 //Code Here
-
+let {color, make, model, year} = carDetails
+// console.log(color + make + model + year)
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -105,13 +106,18 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName, title, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
+// let names = {
+//   firstName: 'Alex',
+//   lastName: 'Lamb',
+//   title: "Mr."
+// }
+// console.log(greeting(names))
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -124,8 +130,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation (obj) {
+  let {utah: utahNum, california: calforniaNum, texas: texasNum, arizona: arizonaNum} = obj
+  let totalNumber = utahNum + calforniaNum + texasNum + arizonaNum
 
+  return totalNumber
+}
 
+// let stateNum = {
+//   utah: 5,
+//   california: 27,
+//   texas: 15,
+//   arizona: 6
+// }
+// console.log(totalPopulation(stateNum))
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -138,9 +156,23 @@ function greeting( obj ) {
 */
 
 //Code Here
+let ingredients = {
+  carb: 'bread',
+  fat: 'butter',
+  protein: 'eggs'
 
+}
 
+function ingredientsObj(obj) {
+  let ingredientsArray = []
+  let {carb, fat, protein} = obj
+  
+  ingredientsArray.push(carb, fat, protein)
+  return ingredientsArray
+  
+}
 
+console.log(ingredientsObj(ingredients))
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
 var user = {
@@ -160,7 +192,10 @@ var user = {
 */
 
 //Code Here
+user["name"] = 'Bryan G. Smith'
+user["email"] = 'bryan.smith@devmounta.in'
 
+// console.log(user)
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -168,7 +203,8 @@ var user = {
 */
 
 //Code Here
-
+delete user.age;
+// console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -178,8 +214,15 @@ var user = {
 */
 
 //Code here
-
-
+class Cat {
+  constructor(name, age, color){
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+}
+let cat1 = new Cat('Max', 7, 'black')
+console.log(cat1.name)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
